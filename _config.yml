@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: whamwong's blog
+title: whamwong Blog
 subtitle: 'null'
 author: whamwong
 language:
@@ -28,12 +28,9 @@ keyword: ""
 
 # SNS settings
 # RSS: false
-weibo_username:     Demonbane
-zhihu_username:     Demonbane
-github_username:    Kaijun
-twitter_username:   Demonbane_x
-facebook_username:  demonbane.cn
-linkedin_username:  kaijun-chen-42089354
+weibo_username:     wwh_09
+twitter_username:   whamwon9
+facebook_username:  whamwon9
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
