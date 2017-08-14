@@ -11,8 +11,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://kaijun.rocks/hexo-theme-huxblog
-root: /hexo-theme-huxblog/
+url: http://whamwong.me
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -147,5 +147,5 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/Kaijun/hexo-theme-huxblog
+  repo: https://github.com/WHAMWONG/blog.git
   branch: gh-pages
