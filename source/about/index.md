@@ -7,5 +7,9 @@ header-img: "img/home-bg.jpg"
 comments: true
 ---
 
-一个品味还 Okay 的 PM，喜欢篮球、音乐，最近在学木吉他。
+whamwong
+想做自己理解的产品设计者，但有时会厌倦这个行业。
+
+Mail：immaidiotowng@gmail.com
+Wechat ID：wongwaihamm
 

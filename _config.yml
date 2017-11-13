@@ -4,7 +4,7 @@
 
 # Site
 title: whamwong Blog
-subtitle: 'null'
+subtitle: '何 曰 必 利'
 author: whamwong
 language:
 timezone:
@@ -19,7 +19,7 @@ permalink_defaults:
 #Custom Setting Start
 
 # Site settings
-SEOTitle: whamwong的博客 | whamwong's Blog
+SEOTitle: whamwong blog
 header-img: img/home-bg.jpg
 email: immaidiotwong@gmail.com
 description: ""
