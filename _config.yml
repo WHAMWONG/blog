@@ -30,7 +30,7 @@ keyword: ""
 # RSS: flase
 weibo_username:     wwh_09
 twitter_username:   whamwon9
-facebook_username:  whamwon9
+# facebook_username:  whamwon9
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`

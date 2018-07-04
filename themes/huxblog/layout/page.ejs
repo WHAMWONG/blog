@@ -20,6 +20,7 @@ layout: layout
 
 <!-- Main Content -->
 <div class="container">
+    <%= page.layout %>
     <div class="row">
         <% if(config.sidebar == false) { %>
 <!-- NO SIDEBAR -->
@@ -76,7 +77,7 @@ layout: layout
                 <%- page.content || body %>
 
                 <!-- 如果开启评论功能 -->
-                <% if(page.comments) { %>
+                <% if(page.comments && page.layout !== 'about') { %>
                     <hr>
 
                     <% if(config['duoshuo_username']) { %>
