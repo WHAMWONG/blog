@@ -1,463 +1,317 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+  <meta charset="utf-8">
+  
+  <title>whamwong Blog | 何 曰 必 利</title>
 
-    <title>
-        
-          whamwong blog
-        
-    </title>
+  
+  <meta name="author" content="whamwong">
+  
 
-    <link rel="canonical" href="http://whamwong.me/">
+  
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/hux-blog.min.css">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!-- Pygments Highlight CSS -->
-    <link rel="stylesheet" href="/css/highlight.css">
+  
 
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:site_name" content="whamwong Blog"/>
 
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
 
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ga & ba script hoook -->
-    <script></script>
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="whamwong Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
 
 
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
+<body>
+<div class="blog">
+  <div class="content">
 
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">whamwong Blog</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    
-
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archives/">Archives</a>
-                        </li>
-                        
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-    <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>whamwong Blog</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">何 曰 必 利</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">whamwong Blog</a>
+    </h1>
+    <p class="site-description">何 曰 必 利</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="https://www.baidu.com">Profile</a></li>
+      
+    </ul>
+  </nav>
 </header>
 
+    <main class="site-main posts-loop">
+    
+  <article>
 
+  
+    
+    <h3 class="article-title"><a href="/2017/12/31/2017-12-31/"><span>ぼうねんかい</span></a></h3>
+    
+  
 
-<!-- Main Content -->
-<div class="container">
-    undefined
-    <div class="row">
+   
+    <div class="article-top-meta">
+      <span class="posted-on">
+        <a href="/2017/12/31/2017-12-31/" rel="bookmark">
+          <time class="entry-date published" datetime="2017-12-31T10:00:00.000Z">
+            2017-12-31
+          </time>
+        </a>
+      </span>
+    </div>
+  
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>「忘年會 ぼうねんかい <a href="https://en.wikipedia.org/wiki/Bōnenkai" target="_blank" rel="external">Bōnenkai</a>」是最近学来的日语词汇，意思也就是「年会」，大概也有「除夕」。所谓的年会实际应该做的事情是对过去一年回顾总结，但如果在国内的话，重点是什么时机提着红酒杯向老板敬酒；或者是自己有没有中奖。这大概是为什么我并不期待自己公司的年会了，所以俗套地为自己的 2017 年做一个总结吧。</p>
+<hr>
+<h2 id="工作上的无奈"><a href="#工作上的无奈" class="headerlink" title="工作上的无奈"></a>工作上的无奈</h2><p>很遗憾，年初给自己定下来的 2017 年薪酬目标没有实现，这也让自己更加思考选择雇主的考量因素。两年前的自己认为企业的盈利状况跟自己并没过多的联系，或许企业有足够的投资资金，对于自己涨薪应该是顺理成章的事情。两年的磨练后发现这个想法是错的，企业期望的就是性价比员工，衡量员工的薪酬有年资、学历、过往成绩、可替代性、面试时的博弈状况等，然而这些仅仅是初始值，而未来的浮动又是一个很关键的因素，这更大层面就取决于企业的发展状况和老板的态度了。所以未来考量雇主，会更注重盈利状况，即使非盈利也要考量其商业模式。</p>
+<p>虽然在财富方面没有太大长进，但在技能上却有各式各样的项目让自己有所提高。有 HTML 5 的策划、Digital Design、2B 型业务产品等，更重要的是在各种产品思维的锻炼。从另外方面，自己通过试探已经证明了市场价值，不必为自己担心。</p>
+<blockquote>
+<p>犯过错了，智商高的人，才会成长。-by 知乎上的某喷子</p>
+</blockquote>
+<hr>
+<h2 id="精神上的富足"><a href="#精神上的富足" class="headerlink" title="精神上的富足"></a>精神上的富足</h2><h4 id="终于看了周杰倫的演唱會"><a href="#终于看了周杰倫的演唱會" class="headerlink" title="终于看了周杰倫的演唱會"></a>终于看了周杰倫的演唱會</h4><p>没有看过周杰倫的演唱会的青春不完整？我笑问朋友「我还算是青春期吗？」然后被斜眼了哈哈。<br>一月份在香港看了「地表最强演唱会」，里面有段「印地安老斑鸠」的 Jazz 版本很喜欢，尤其是加上红馆的设备听 Sax 很赞。另外演唱会貌似都有求婚桥段的感觉，当晚有 Jay 的师弟求婚，但看大萤幕女生表情不是很愿意，只能敷衍接受了。这就是我印象最深的。</p>
         
+          <a href="/2017/12/31/2017-12-31/">more »</a>
+        
+      
+    </div>
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
+  </div>
 
+  <div class="article-footer">
+    <div class="article-meta pull-left">
 
-<div class="post-preview">
+    
 
-    <a href="/2017/12/31/2017-12-31/">
-        <h2 class="post-title">
-            ぼうねんかい Bōnenkai
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            「忘年會 ぼうねんかい Bōnenkai」是最近学来的日语词汇，意思也就是「年会」，大概也有「除夕」。所谓的年会实际应该做的事情是对过去一年回顾总结，但如果在国内的话，重点是什么时机提着红酒杯向老板敬酒；或者是自己有没有中奖。这大概是为什么我并不期待自己公司的年会了，所以俗套地为自己的 2017 年做一个总结吧。
-
-工作上的无奈很遗憾，年初给自己定下来的 2017 年薪酬目标没有实现，这也让......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by whamwong on
-        2017-12-31
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2017/11/13/2017-10-22/">
-        <h2 class="post-title">
-            用了一个月的 iPhone 8
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            为什么要买 iPhone 8iPhone 8 的市场定位很尴尬。一方面是跟去年的 iPhone 7 相比，仅是新的玻璃后盖、处理性能、拍照和无关紧要的小功能，似乎看起来毫无诚意。而更重要的另一方面则是被相同时间发布的 iPhone X ，all-screen OLED 屏幕，Face ID，Portrait Lighting，Animoji 等等，的确非常惊艳。然而自己还是选择买了 iPho......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by whamwong on
-        2017-11-13
-    </p>
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2017/08/16/2017-08-16/">
-        <h2 class="post-title">
-            忍者拉面一般般啦
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-看了山下智博的 vlog 后，求了秋锅两个星期后，他终于肯陪我品尝一番「忍者拉面」。可能今天是工作日的关系，只要排队一阵子就可以上桌了，两人都点了黑蒜油拉面，一份炸鸡，但是居然没有日式料理下最棒的饮品「梅子苏打」，伤心 (;´༎ຶД༎ຶ`) 
-
-黑蒜油拉面 ★★★☆☆汤底别有一番风味（原谅我吃拉面比较少），溏心蛋好吃。但是叉烧和面就比较一般，没有惊艳感觉。秋锅说下次带小弟去「一風堂」见识一......
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by whamwong on
-        2017-08-16
-    </p>
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
     
     
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/LIFE-STYLE/">LIFE STYLE</a>
+    </span>
+    
+
+    </div>
+
+<!--     
+    <div class="article-meta pull-right">
+      <span>
+        <i class="icon-comments"></i>
+        <span>
+          <a href="/2017/12/31/2017-12-31/#comment">Comments</a>
+        </span>
+      </span>
+    </div>
+     -->
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/11/13/2017-10-22/"><span>用了一个月的 iPhone 8</span></a></h3>
+    
+  
+
+   
+    <div class="article-top-meta">
+      <span class="posted-on">
+        <a href="/2017/11/13/2017-10-22/" rel="bookmark">
+          <time class="entry-date published" datetime="2017-11-13T15:00:00.000Z">
+            2017-11-13
+          </time>
+        </a>
+      </span>
+    </div>
+  
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="为什么要买-iPhone-8"><a href="#为什么要买-iPhone-8" class="headerlink" title="为什么要买 iPhone 8"></a>为什么要买 iPhone 8</h2><p>iPhone 8 的市场定位很尴尬。一方面是跟去年的 iPhone 7 相比，仅是新的玻璃后盖、处理性能、拍照和无关紧要的小功能，似乎看起来毫无诚意。而更重要的另一方面则是被相同时间发布的 iPhone X ，all-screen OLED 屏幕，Face ID，Portrait Lighting，Animoji 等等，的确非常惊艳。然而自己还是选择买了 iPhone 8。</p>
+<p>很多人都在吐槽 iPhone 8 跟 iPhone 7 没有太多创新云云，但我更愿意从个人使用感受来去评价这个产品。</p>
+<p>我之前使用的是 iPhone 6 ，老化的电池和落后的 A8 处理器与数据加载日益增长的 App 的矛盾下导致怎么用都是卡顿，非常折磨。而直接用了 iPhone 8 后，升级感觉相当明显。尤其是之前未能拥有的 3D touch，Tapic Engine 反馈，双扬声器等。即使发售价格比去年的 iPhone 7 贵（其实我并没有考究是否真的比 iPhone 7 价格贵  <em>( :3 」 )</em> ），但是科技产品产品终究是买新不买旧，毕竟对于自己来说，在没有突发意外的情况下，买了就要使用两年以上的。下面就来说说各处的体验吧。</p>
+<h2 id="A11-Bionic-chip"><a href="#A11-Bionic-chip" class="headerlink" title="A11 Bionic chip"></a>A11 Bionic chip</h2><p><strong>这是我最满意 iPhone 8 的原因。</strong>A11 Bionic 的处理器的加持下，开什么 App 都非常快。先不管什么两个性能核心加四个能效核心和「仿生」这种吹嘘的东西，我最不能忍受的是之前每次打开各种 App 都是要等待 Splash 页面几秒，但是使用 iPhone 8 后几乎秒开，尤其是某些国产 App。但其中也有另外，知乎 for iOS 性能表现真的垃圾，之前也通过客服渠道吐槽过一番并接受回复说内部正在重构代码，但是表现还是不可以。所以我也把知乎删除了，顺便也戒掉习惯刷知乎的毛病。</p>
+<p>看到 iPhone X 跟 8 用的是一样的 A11 Bionic，心里是美滋滋的。(ˊo̴̶̷̤⌄o̴̶̷̤ˋ)</p>
+<p>但是我想 A11 的机器学习能力可能对于 iPhone X 的 Face ID 更有深度的意义。</p>
+<h2 id="玻璃后盖和-AppleCare"><a href="#玻璃后盖和-AppleCare" class="headerlink" title="玻璃后盖和 AppleCare +"></a>玻璃后盖和 AppleCare +</h2><p>从视觉观感来说，iPhone 8 的玻璃后盖的设计的确很漂亮，尤其是没有两条天线白带，看起来非常自然。但从手敢来说，感觉就很糟糕了。第一是太滑，一不小心就会脱手；第二是如果桌面若有灰尘，拿起 iPhone 8 的时候摸起后盖的感觉就是灰尘的颗粒感，很难受!（原谅我的强迫症 <em>( :3 」 )</em> ）</p>
+<p>但是最重要的是不要相信 <em>提姆·厨师</em> 所说的最硬的玻璃后盖，其实很容易碎。使用了 4 天的 iPhone 8 就因为扫一下摩拜单车的二维码脱手摔碎了，非常心疼。在此强烈建议在外使用 iPhone 8 以上的设备的时候，不要进行裸奔使用。鉴于尝试各种 iPhone Case 后，个人感觉官方的皮革 iPhone Case 手感最好，除了贵的缺点外推荐购买。</p>
+<center><img src="http://whamwong-blog.oss-cn-shenzhen.aliyuncs.com/Apple-iPhone-8-Leather-Case-Review-TI.jpg" alt="iPhone 8 with leather case"></center>
+
+
+<p>也因为后盖摔碎了后，就赶紧入手了 AppleCare + 。也了解了购买 AppleCare + 的小攻略，如果在购买日期的 4 天内购买的话（线上购买 iPhone 按照发货日期），可以在某宝买到超低的发售价格，这大概是 Apple 为了促进 AppleCare + 销量的给渠道商的特别价格，毕竟维修服务也是 Apple 血赚的业务。当然如果超过了 4 天，也建议在某宝上购买 AppleCare + ，起码都是比官方价格便宜。</p>
+<p>想起来以后两年内，碎屏幕维修只要 ¥188，其他维修只要 ¥628（大部分都是直接换新的 iPhone 给你），也是美滋滋。</p>
+<h2 id="iOS-11"><a href="#iOS-11" class="headerlink" title="iOS 11"></a>iOS 11</h2><p>其实 iOS 11.1 才算是今年 iOS 的正式版本。起码这个版本不会再出现交互动画跳帧的情况。下面说说最满意的三个小功能。</p>
+<p>一是能够半自定义的 Control Center。能够按照自己所习惯的场景自定义添加功能和排序（好让自己的手指能够快速的触发按钮）。而我用的最多的就是 Wallet ，因为每天坐地铁使用 Apple Pay 来支付，虽然知道 iPhone 只要在闸门的 NFC 感应器附近就能触发 Wallet 界面，但是这整个过程大概需要 1 秒的时间。一般早上排队入闸的时候为了不给后面的人带来麻烦，我都会手动把 Wallet 打开，直接支付。而使用 Control Center 来做入口就方便很多。</p>
+<p>二是 True Tone 功能。虽然说很多人抱怨开启了 True Tone 功能后屏幕变黄，但是我在睡前都会有玩手机的习惯，在黑夜的环境下使用一会眼睛会非常的疼痛，但是开启 True Tone 后疼痛的状况就减少了。</p>
+<p>不知道是 iOS 的 某 Kit 有做什么开放，还是第三方 App 做了适配。自从升级了 iOS 11 后，所有的音乐类的 App 都可以在 Control Center 的拉动进度条。虽然这个功能使用的场景很少，但是起码在用 Spotify 时候能像亲儿子 Apple Music 一样的体验，欣喜!</p>
+<center><img src="http://whamwong-blog.oss-cn-shenzhen.aliyuncs.com/ios%2011%20jietu.png" alt="iOS 11 jietu"> </center>
+
+
+<h2 id="为什么不买-iPhone-X"><a href="#为什么不买-iPhone-X" class="headerlink" title="为什么不买 iPhone X"></a>为什么不买 iPhone X</h2><ul>
+<li><p>贵! iPhone 作为一个手机或者娱乐设备，我还是接受不了奖金一万元的售价。一个价值一万元的设备我想它是具备一定的生产力的，简而言之能够给我带来产出直接赚钱的，例如 MacBook 就是我个人赚钱的工具。而对于我来说 iPhone 还是娱乐机，虽然说可以移动办公，但是这个效率太差了。当然自己也要努力发展个人经济，期待一天可以随随便便购买「一万元」的娱乐设备的能力。</p>
+</li>
+<li><p>俗话说买 Apple 设备都不要买第一代，iPhone X 作为新一代的产品（线），硬件都会出现各种各样的小问题。</p>
+</li>
+<li>根据 <a href="https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/" target="_blank" rel="external">Human Interface Guidelines</a> 所述，上方是状态栏（iPhone X 是 44点，iPhone 8 是20点），下方是 Home Indicator 区（约34点），这两个区域都属于系统，不应该使用（如果使用，那么应该设计得当）。iPhone X 的屏幕比 iPhone 8 高145点，但扣掉这两个区域后就只多出了67点的空间（约一个半按钮的大小）。其实普通 App 一屏获取的信息量也没有多多少，只是视觉上比较震撼而已。<center><img src="http://whamwong-blog.oss-cn-shenzhen.aliyuncs.com/9a099b04gy1fl6xjeo9dpj20rs0m8djs.jpg" alt="iphone x and iPhone 8"></center></li>
+<li>iPhone 8 的模具用四代，已经一个终极产品（相信下一代不会再用这款模具了吧~），完美的 LCD 的调教，何乐不为了。但是没有 iPad Pro 的 ProMotion，心有残念。 … ( ꒪ω ꒪) … </li>
 </ul>
+<p><em>#EOF</em></p>
 
-
-
-                <!-- 如果开启评论功能 -->
-                
-
-            </div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                        
-                            
-                        
-                            
-                        
-                            
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/whamwong_profile.jpg" />
-                        
-
-                        
-                            <p>想去日本组一个后宫摇滚乐团🎸</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            
-                            
-                                <li>
-                                    <a target="_blank" href="https://twitter.com/whamwon9">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-                            
-
-                            
-                                <li>
-                                    <a target="_blank" href="http://weibo.com/wwh_09">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            
-
-                            
-
-                            
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                </section>
-                
-                <!-- Friends Blog -->
-                
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-
-                    
-                        <li><a href="https://lumpyli.com" target="_blank">lumpyli&#39;s Blog</a></li>
-                    
-                </ul>
-                
-            </div>
-        
+      
     </div>
-</div>
 
+  </div>
 
-    <!-- Footer -->
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                
-        
+  <div class="article-footer">
+    <div class="article-meta pull-left">
 
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; whamwong Blog 2018
-                </p>
-            </div>
-        </div>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/TECH/">TECH</a>
+    </span>
+    
+
     </div>
+
+<!--     
+    <div class="article-meta pull-right">
+      <span>
+        <i class="icon-comments"></i>
+        <span>
+          <a href="/2017/11/13/2017-10-22/#comment">Comments</a>
+        </span>
+      </span>
+    </div>
+     -->
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/08/16/2017-08-16/"><span>忍者拉面一般般啦</span></a></h3>
+    
+  
+
+   
+    <div class="article-top-meta">
+      <span class="posted-on">
+        <a href="/2017/08/16/2017-08-16/" rel="bookmark">
+          <time class="entry-date published" datetime="2017-08-16T15:00:00.000Z">
+            2017-08-16
+          </time>
+        </a>
+      </span>
+    </div>
+  
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><img src="http://whamwong-blog.oss-cn-shenzhen.aliyuncs.com/20170816%E5%BF%8D%E8%80%85%E6%8B%89%E9%9D%A2/IMG_1666.JPG" alt="位于天河南的忍者拉面"></p>
+<p>看了<a href="https://www.bilibili.com/video/av11017547/?from=search&amp;seid=13895161601576733645" target="_blank" rel="external">山下智博</a>的 vlog 后，求了秋锅两个星期后，他终于肯陪我品尝一番「<a href="http://www.dianping.com/shop/69653068" target="_blank" rel="external">忍者拉面</a>」。可能今天是工作日的关系，只要排队一阵子就可以上桌了，两人都点了黑蒜油拉面，一份炸鸡，但是居然没有日式料理下最棒的饮品「梅子苏打」，伤心 (;´༎ຶД༎ຶ`) </p>
+<p><img src="http://whamwong-blog.oss-cn-shenzhen.aliyuncs.com/20170816%E5%BF%8D%E8%80%85%E6%8B%89%E9%9D%A2/IMG_1669.JPG" alt="黑蒜油拉面"></p>
+<p>黑蒜油拉面 ★★★☆☆<br>汤底别有一番风味（原谅我吃拉面比较少），溏心蛋好吃。但是叉烧和面就比较一般，没有惊艳感觉。秋锅说下次带小弟去「一風堂」见识一下，虽然我印象中有吃过，但是早已经不知道什么味道，竟然他请我去那就必须奉陪了。</p>
+<p><img src="http://whamwong-blog.oss-cn-shenzhen.aliyuncs.com/20170816%E5%BF%8D%E8%80%85%E6%8B%89%E9%9D%A2/IMG_1672.JPG" alt="炸鸡"></p>
+<p>炸鸡 ★★☆☆☆<br>炸鸡很小块，佐料比较一般。推荐去广州东站的<a href="http://www.dianping.com/shop/5437289" target="_blank" rel="external">火垂火</a>试一下他们的炸鸡。不过个人强迫症都是冬天吃日式火锅会比较爽。</p>
+<p>当我们吃完出来时，看到对面的「一龍拉面」排长龙，有感觉被骗的感觉。(´ . .̫ . `) 看来要吃完天河南 - 体育东 - 广州东站所有的日料仍需时日啊。</p>
+<p>再会!</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/DINE/">DINE</a>
+    </span>
+    
+
+    </div>
+
+<!--     
+    <div class="article-meta pull-right">
+      <span>
+        <i class="icon-comments"></i>
+        <span>
+          <a href="/2017/08/16/2017-08-16/#comment">Comments</a>
+        </span>
+      </span>
+    </div>
+     -->
+  </div>
+</article>
+
+
+
+
+<nav class="pagination">
+  
+  
+</nav>
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 whamwong
+    
+  </p>
 </footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/hux-blog.min.js"></script>
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://whamwong.me/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-<!-- Google Analytics -->
-
-
-
-
-<!-- Baidu Tongji -->
-
-
-<!-- Side Catalog -->
-
-
-
-
-
-<!-- Image to hack wechat -->
-<img src="http://whamwong.me/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
-
+    
+  </div>
+</div>
 </body>
-
 </html>
