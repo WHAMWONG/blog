@@ -2,9 +2,12 @@
 layout: "about"
 ---
 
-### whamwong
+## whamwong or Yui
+Living in Tokyo. Study in Keio University. 
 
-### 可以在下面找到我
-[Twitter@whamwon9](https://twitter.com/whamwon9)
+Yui is the name given by my Japanese teacher. Because in my Chinese name, the pronunciation of 「維」in Japanese is ユイ.
+
+
+## Contact
 [Instagram@whamwon9](https://www.instagram.com/whamwon9/)
-Email：whamwon9@gmail.com
+whamwon9@gmail.com
