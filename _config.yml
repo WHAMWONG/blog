@@ -4,7 +4,7 @@
 
 # Site
 title: whamwong Blog
-subtitle: '何 曰 必 利'
+subtitle: 'Serenity'
 author: whamwong
 language:
 timezone:
@@ -56,7 +56,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Sidebar settings
 
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "想去日本组一个后宫摇滚乐团🎸"
+sidebar-about-description: ""
 sidebar-avatar: img/whamwong_profile.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
