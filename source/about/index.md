@@ -2,9 +2,10 @@
 layout: "about"
 ---
 
-## whamwong or Yui
-Living in Japan. Study in Keio University. 
+## whamwong or yui
+我是 yui
+生活在东京
+职种是产品经理
 
 ## Contact
-[Instagram@whamwon9](https://www.instagram.com/whamwon9/)
 whamwon9@gmail.com
