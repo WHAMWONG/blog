@@ -2,10 +2,11 @@
 layout: "about"
 ---
 
-## whamwong or yui
-我是 yui
-生活在东京
-职种是产品经理
+## yui or whamwong
+Living in Tokyo
+Product Manager
+Home Beatmaker
+Always Exploring
 
 ## Contact
-whamwon9@gmail.com
+yui@whamwong.me
