@@ -37,7 +37,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings
-disqus_username: whamwong-blog
+# disqus_username: whamwong-blog
 
 # Duoshuo settings
 # duoshuo_username: kaijun
