@@ -11,8 +11,8 @@ gitment_client_id:
 gitment_client_secret:
 
 # disqus comment
-disqus: boolean
-disqus_shortname: whamwong-blog
+disqus: false
+# disqus_shortname: whamwong-blog
 
 # google analytics
 googleTrackId:
