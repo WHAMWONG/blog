@@ -1,0 +1,116 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { sortedPosts, postPath, formatDate, type Post } from '../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await sortedPosts();
+  return posts.map((post, idx) => ({
+    params: { path: postPath(post).replace(/^\/|\/$/g, '') },
+    props: {
+      post,
+      newer: posts[idx - 1] ?? null,
+      older: posts[idx + 1] ?? null,
+    },
+  }));
+}
+
+interface Props {
+  post: Post;
+  newer: Post | null;
+  older: Post | null;
+}
+
+const { post, newer, older } = Astro.props;
+const { Content } = await render(post);
+const lang = post.data.lang ?? 'zh-Hant';
+---
+
+<Base title={post.data.title}>
+  <article lang={lang}>
+    <header class="post-header">
+      <h1 class="post-title">{post.data.title}</h1>
+      <p class="post-meta">
+        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      </p>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+
+  <nav class="post-nav" aria-label="Post navigation">
+    {
+      older ? (
+        <a class="plain post-nav-link" href={postPath(older)} rel="prev">
+          <span class="post-nav-label">Previous</span>
+          <span class="post-nav-title">{older.data.title}</span>
+        </a>
+      ) : (
+        <span />
+      )
+    }
+    {
+      newer && (
+        <a class="plain post-nav-link post-nav-next" href={postPath(newer)} rel="next">
+          <span class="post-nav-label">Next</span>
+          <span class="post-nav-title">{newer.data.title}</span>
+        </a>
+      )
+    }
+  </nav>
+</Base>
+
+<style>
+  .post-header {
+    margin-block-end: var(--space-xl);
+  }
+
+  .post-title {
+    font-size: var(--text-title);
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .post-meta {
+    margin: 0;
+    font-size: var(--text-small);
+    color: var(--ink-muted);
+  }
+
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    margin-block-start: var(--space-2xl);
+  }
+
+  .post-nav-link {
+    display: grid;
+    gap: 0.15rem;
+    max-width: 46%;
+  }
+
+  .post-nav-next {
+    text-align: end;
+  }
+
+  .post-nav-label {
+    font-size: var(--text-meta);
+    color: var(--ink-muted);
+  }
+
+  .post-nav-title {
+    font-size: var(--text-small);
+    line-height: 1.7;
+    transition: color 0.18s ease-out;
+  }
+
+  .post-nav-link:hover .post-nav-title {
+    color: var(--accent);
+  }
+</style>

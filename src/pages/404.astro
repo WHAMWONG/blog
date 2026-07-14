@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found">
+  <div class="lost">
+    <p class="lost-mark" aria-hidden="true">404</p>
+    <h1 class="lost-title">Page not found</h1>
+    <p class="lost-text">It may have been moved, or it never existed. <a href="/">Back to posts</a>.</p>
+  </div>
+</Base>
+
+<style>
+  .lost {
+    padding-block: var(--space-xl);
+  }
+
+  .lost-mark {
+    font-size: clamp(4rem, 12vw, 6rem);
+    line-height: 1;
+    margin: 0 0 var(--space-lg);
+    color: var(--rule);
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .lost-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .lost-text {
+    margin: 0;
+    color: var(--ink-secondary);
+  }
+</style>

@@ -3,5 +3,7 @@ Thumbs.db
 db.json
 *.log
 node_modules/
-public/
+dist/
+.astro/
+migration/images/
 .deploy*/
