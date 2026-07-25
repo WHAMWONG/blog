@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "images:download": "node scripts/migrate-images.mjs download",
-    "images:rewrite": "node scripts/migrate-images.mjs rewrite"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
